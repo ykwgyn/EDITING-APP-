@@ -1,0 +1,21 @@
+[project]
+name = "assembly-tool"
+version = "0.1.0"
+description = "Frame-accurate assembly editing tool: assembles timelines, never renders decisions."
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/assembly_tool"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
